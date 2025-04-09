@@ -1,0 +1,89 @@
+/* src/Navbar.css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mulish;
+}.navbar {
+  /* background: linear-gradient(135deg, #5e4b8b, #4e6e8c); */
+  /* background-color: rgba(137, 134, 146, 0.389); */
+  background: linear-gradient(
+    135deg,
+    rgba(35, 37, 52, 0.9),
+    rgba(44, 44, 44, 0.8),
+    rgba(173, 170, 181, 0.7)
+  );
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 0 15px 5px rgba(50, 50, 50, 0.8);
+    
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 60px;
+  }
+  
+  /* 🧩 Nav-links ortada */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    color: #00ffff;
+  }
+  
+  /* 🍔 Burger sağda */
+  .burger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  
+  /* ✅ Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: linear-gradient(135deg, #5e4b8b, #4e6e8c);
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 150px;
+      border-radius: 8px;
+      padding: 10px;
+      flex: unset;
+      justify-content: flex-start;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .burger {
+      display: block;
+    }
+  }
+  
