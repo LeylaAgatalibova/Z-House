@@ -1,8 +1,7 @@
-// src/Navbar.jsx
 
+import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
-import './Navbar.css'; // Stil ayrıca saxlayırıq
-
+import './Navbar.css'; 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -12,10 +11,11 @@ function Navbar() {
     <div className="logo">FastMaster</div>
   
     <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#projects">Projects</a></li>
+    <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/projects">Projects</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/gallery">Gallery</Link></li>
     </ul>
   
     <div className="burger" onClick={() => setMenuOpen(!menuOpen)}>

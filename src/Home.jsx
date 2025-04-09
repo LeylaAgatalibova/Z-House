@@ -120,7 +120,8 @@ function Home() {
 
     return (
         <>
-            <section className="hero">
+        <div >
+        <section className="hero">
             <div
   className="hero-overlay fade-up"
   ref={(el) => (rowsRef.current[3] = el)}
@@ -234,6 +235,9 @@ function Home() {
                     </div>
                 )}
             </section>
+
+        </div>
+           
         </>
     );
 }
