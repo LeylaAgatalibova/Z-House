@@ -1,0 +1,482 @@
+.wallarts-hero {
+    background-image: url('https://www.anezkaarts.com/cdn/shop/files/8_c5a83b9f-43a1-480e-a92c-72e23b2a2fe2.webp?v=1721406412&width=2000');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* Karartma efekti */
+    padding: 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .hero-text {
+    color: white;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+
+  
+
+  /* View Selector */
+  .view-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 30px 0;
+  }
+  
+  .view-selector button {
+    padding: 8px 16px;
+    border: 1px solid #aaa;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+  }
+  
+  .view-selector button.active,
+  .view-selector button:hover {
+    background-color: #222;
+    color: white;
+  }
+  
+  /* Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    gap: 20px;
+    padding: 0 20px 40px;
+    justify-content: center;
+  }
+  
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: 1px solid #ccc;
+  }
+  
+  .gallery-grid img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+      grid-template-columns: 1fr;
+    }
+  
+    .wallarts-hero h1 {
+      font-size: 1.8rem;
+    }
+  
+    .wallarts-hero p {
+      font-size: 1rem;
+    }
+  }
+  
+  .wallarts-hero {
+    background-image: url('https://www.anezkaarts.com/cdn/shop/files/8_c5a83b9f-43a1-480e-a92c-72e23b2a2fe2.webp?v=1721406412&width=2000');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .wallarts-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4); /* hafif karartma efekti */
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .wallarts-hero-overlay p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .wallarts-hero-overlay h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+
+  .column-selector {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .view-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .view-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease;
+  }
+  
+  .view-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .view-btn.active {
+    border-color: #333;
+  }
+  
+  /* Görsel ikonları */
+  .view-btn::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    display: grid;
+    gap: 3px;
+  }
+  
+  /* 2 kolon kutusu */
+  .two-cols::before {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .two-cols::before > * {
+    background: #444;
+    border-radius: 2px;
+  }
+  
+  /* 3 kolon kutusu */
+  .three-cols::before {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .three-cols::before > * {
+    background: #444;
+    border-radius: 2px;
+  }
+  
+  /* 4 kolon kutusu */
+  .four-cols::before {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .four-cols::before > * {
+    background: #444;
+    border-radius: 2px;
+  }
+  
+  /* hamburger */
+  .single-col::before {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+  .single-col::before > * {
+    height: 3px;
+    background: #444;
+    border-radius: 1px;
+  }
+  
+  /* İç bloklar */
+  .view-btn::before > * {
+    content: '';
+    display: block;
+    height: 100%;
+  }
+  .column-selector {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .view-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+  }
+  
+  .view-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.2s ease;
+    display: grid;
+    place-items: center;
+  }
+  
+  .view-btn:hover {
+    background-color: #ddd;
+  }
+  
+  .view-btn.active {
+    border-color: #333;
+  }
+  
+  /* Ortadaki grid */
+  .view-btn::before {
+    content: '';
+    display: grid;
+    gap: 3px;
+  }
+  
+  /* Ortaya koymak için */
+  .view-btn.two-cols::before {
+    grid-template-columns: repeat(2, 1fr);
+    width: 16px;
+    height: 16px;
+  }
+  
+  .view-btn.three-cols::before {
+    grid-template-columns: repeat(3, 1fr);
+    width: 18px;
+    height: 18px;
+  }
+  
+  .view-btn.four-cols::before {
+    grid-template-columns: repeat(4, 1fr);
+    width: 20px;
+    height: 20px;
+  }
+  
+  .view-btn.nine-grid::before {
+    grid-template-columns: repeat(3, 1fr);
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Her kutunun içindeki daire/kare */
+  .view-btn::before > * {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px; /* daire */
+  }
+  
+  /* Eğer kare istersen bu satırı değiştir: */
+  /* border-radius: 1px; */
+  
+    
+
+  .wallarts-page {
+    font-family: sans-serif;
+  }
+  
+  /* Hero */
+  .wallarts-hero {
+    position: relative;
+    background-image: url('https://www.anezkaarts.com/cdn/shop/files/8_c5a83b9f-43a1-480e-a92c-72e23b2a2fe2.webp?v=1721406412&width=2000');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wallarts-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 12px;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .hero-title {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* Görünüm Butonları */
+  .column-selector {
+    text-align: center;
+    margin: 30px 0 10px;
+  }
+  
+  .view-options {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .view-btn {
+    width: 36px;
+    height: 36px;
+    border: 2px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: border 0.2s;
+  }
+  
+  .view-btn.active {
+    border-color: black;
+  }
+  
+  .two-box::before,
+  .six-box::before {
+    content: '';
+    width: 70%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+    gap: 2px;
+    background: transparent;
+  }
+  
+  .two-box::before {
+    background-image:
+      linear-gradient(to right, black 0.5px, transparent 0.5px),
+      linear-gradient(to bottom, black 0.5px, transparent 0.5px);
+    background-size: 50% 100%, 100% 50%;
+  }
+  
+  .six-box::before {
+    background-image:
+      linear-gradient(to right, black 0.5px, transparent 0.5px),
+      linear-gradient(to bottom, black 0.5px, transparent 0.5px);
+    background-size: 33.3% 100%, 100% 33.3%;
+  }
+  
+  /* Galeri Grid */
+  .gallery-grid {
+    display: grid;
+    gap: 16px;
+    padding: 20px;
+  }
+  
+  .gallery-grid.large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .gallery-grid.medium {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .gallery-grid.small {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+
+  
+  .gallery-image:hover {
+    transform: scale(1.03);
+  }
+  
+  /* Mobil Uyum */
+  @media (max-width: 768px) {
+    .gallery-grid.large {
+      grid-template-columns: 1fr;
+    }
+  
+    .gallery-grid.small {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+
+  .gallery-image {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: var(--delay, 0s);
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 4px solid #000; /* koyu renk deneyelim */
+  }
+  .gallery-image.visible {
+    opacity: 1;
+    transform: translateY(0);
+    
+  }
+  
+
+
+
+  .ceiling-hero {
+    background-image: url('https://assets-news.housing.com/news/wp-content/uploads/2022/02/08130940/featured-compressed-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+
+  .stair-hero {
+    background-image: url('https://hgtvhome.sndimg.com/content/dam/images/hgtv/fullset/2016/9/12/0/James-Wagman-Architect_East-Village-Apt_1.jpg.rend.hgtvcom.1280.720.85.suffix/1473700236560.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  

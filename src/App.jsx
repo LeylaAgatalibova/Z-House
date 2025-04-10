@@ -6,6 +6,13 @@ import About from './About';
 import Contact from './Contact';
 import Gallery from './Gallery';
 import Projects from './Projects';
+import ArtCollections from './ArtCollections';
+import WallArts from './WallArts';
+import CeilingDesign from './CeilingDesign';
+import StairDesign from './StairDesign';
+
+
+
 
 function App() {
   return (
@@ -17,6 +24,10 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/artcollections" element={<ArtCollections />} />
+        <Route path="/wall-arts" element={<WallArts />} />
+        <Route path="/ceiling-design" element={<CeilingDesign />} />
+        <Route path="/stair-design" element={<StairDesign />} />
       </Routes>
       <Footer />
     </Router>
