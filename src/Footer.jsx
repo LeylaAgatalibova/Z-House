@@ -13,10 +13,10 @@ function Footer() {
       <p>Marbella</p>
     </div>
     <div className="footer-section">
-      <p>+10 234 35 35</p>
+      <p>+10 939 444-99-86</p>
     </div>
     <div className="footer-section">
-      <p>hasanovs@fastmasterdesgin.com</p>
+      <p>zairovs@fastmasterdesgin.com</p>
     </div>
   </div>
 </footer>

@@ -115,129 +115,282 @@ function Home() {
         DokuzuncuProjectSlider
     ];
 
+    const projectDetails = [
+        {
+            title: "Interactive Art Gallery",
+            description: `
+          This project is an interactive digital art gallery built with React. It features a responsive grid layout and a modal-based image slider that allows users to explore artwork in a full-screen view.
+          
+          Key Features:
+          - Built using React with functional components and hooks for state management.
+          - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+          - CSS Grid and Flexbox used for responsive design, ensuring compatibility across screen sizes.
+        
+          
+          This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+            `
+          }
+          ,
+          {
+            title: "Canvas Series",
+            description: `
+          
+          
+          Key Features:
+          - Built using React with functional components and hooks for state management.
+          - Image slider supports swipe gestures and arrow navigation, enhancing mobile usability.
+          - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+          
+        
+          
+          This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+            `
+          },
+        { title: "Luxury Living",  description: `
+          
+          
+            Key Features:
+            - Built using React with functional components and hooks for state management.
+            - Image slider supports swipe gestures and arrow navigation, enhancing mobile usability.
+            - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+            
+          
+            
+            This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+              ` },
+        { title: "Minimal Elegance", description: `
+          
+          
+            Key Features:
+            - Built using React with functional components and hooks for state management.
+            - Image slider supports swipe gestures and arrow navigation, enhancing mobile usability.
+            - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+            
+          
+            
+            This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+              `},
+        { title: "Nature Inspired",  description: `
+          
+          
+            Key Features:
+            - Built using React with functional components and hooks for state management.
+            - Image slider supports swipe gestures and arrow navigation, enhancing mobile usability.
+            - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+            
+          
+            
+            This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+              `},
+        { title: "Classic Touch",  description: `
+          
+          
+            Key Features:
+            - Built using React with functional components and hooks for state management.
+            - Image slider supports swipe gestures and arrow navigation, enhancing mobile usability.
+            - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+            
+          
+            
+            This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+              `},
+        { title: "Urban Vibes",  description: `
+          
+          
+            Key Features:
+            - Built using React with functional components and hooks for state management.
+            - Image slider supports swipe gestures and arrow navigation, enhancing mobile usability.
+            - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+            
+          
+            
+            This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+              `},
+        { title: "Chic Interiors",  description: `
+          
+          
+            Key Features:
+            - Built using React with functional components and hooks for state management.
+            - Image slider supports swipe gestures and arrow navigation, enhancing mobile usability.
+            - Modal includes project-specific details, such as title and description, dynamically rendered using props and state.
+            
+          
+            
+            This project demonstrates a practical approach to implementing a dynamic portfolio/gallery layout with a smooth and engaging user experience.
+              ` },
+        { title: "Elegant Outdoors", description: "Zarif dış mekan görünümleri." }
+    ];
+
+    const [selectedProjectIndex, setSelectedProjectIndex] = useState(null);
+
 
 
 
     return (
         <>
-        <div >
-        <section className="hero">
-            <div
-  className="hero-overlay fade-up"
-  ref={(el) => (rowsRef.current[3] = el)}
->
-  <h1>Reliable. Innovative. Built to Last.</h1>
-  <p>Expert Construction for Modern Living.</p>
-</div>
-
-            </section>
-
-            <section className="projects">
-                <h2>Our Recent Projects</h2>
-
-                {/* Satır 1 */}
-                <div
-                    className="project-row fade-up"
-                    ref={(el) => (rowsRef.current[0] = el)}
-                >
-                    {projectImages.slice(0, 3).map((image, index) => {
-                        const globalIndex = index;
-                        return (
-                            <div
-                                key={index}
-                                className="project-card"
-                                onClick={() => {
-                                    setSelectedSlider(sliders[globalIndex]);
-                                    setCurrentIndex(0);
-                                }}
-                            >
-                                <img src={image} alt={`Project ${globalIndex + 1}`} />
-                                <div className="project-details">
-                                    <p>Project {globalIndex + 1}</p>
-                                    <p className="project-title">Project Title {globalIndex + 1}</p>
-                                </div>
-                            </div>
-                        );
-                    })}
-                </div>
-
-
-                {/* Satır 2 */}
-                <div
-  className="project-row fade-up"
-  ref={(el) => (rowsRef.current[1] = el)}
->
-  {projectImages.slice(3, 6).map((image, index) => {
-    const globalIndex = index + 3;
-    return (
-      <div
-        key={index}
-        className="project-card"
-        onClick={() => {
-          setSelectedSlider(sliders[globalIndex]);
-          setCurrentIndex(0);
-        }}
-      >
-        <img src={image} alt={`Project ${globalIndex + 1}`} />
-        <div className="project-details">
-          <p>Project {globalIndex + 1}</p>
-          <p className="project-title">Project Title {globalIndex + 1}</p>
-        </div>
-      </div>
-    );
-  })}
-</div>
-
-
-<div
-  className="project-row fade-up"
-  ref={(el) => (rowsRef.current[2] = el)}
->
-  {projectImages.slice(6, 9).map((image, index) => {
-    const globalIndex = index + 6;
-    return (
-      <div
-        key={index}
-        className="project-card"
-        onClick={() => {
-          setSelectedSlider(sliders[globalIndex]);
-          setCurrentIndex(0);
-        }}
-      >
-        <img src={image} alt={`Project ${globalIndex + 1}`} />
-        <div className="project-details">
-          <p>Project {globalIndex + 1}</p>
-          <p className="project-title">Project Title {globalIndex + 1}</p>
-        </div>
-      </div>
-    );
-  })}
-</div>
-
-
-                {/* ✅ Modal buraya */}
-                {selectedSlider && (
-                    <div className="modal">
-                        <span className="close" onClick={closeModal}>
-                            &times;
-                        </span>
-                        <img
-                            className="modal-image"
-                            src={selectedSlider[currentIndex]}
-                            alt="Slider"
-                        />
-                        <button className="prev" onClick={goPrev}>
-                            &#10094;
-                        </button>
-                        <button className="next" onClick={goNext}>
-                            &#10095;
-                        </button>
+            <div >
+                <section className="hero">
+                    <div
+                        className="hero-overlay fade-up"
+                        ref={(el) => (rowsRef.current[3] = el)}
+                    >
+                        <h1>Reliable. Innovative. Built to Last.</h1>
+                        <p>Expert Construction for Modern Living.</p>
                     </div>
-                )}
-            </section>
 
+                </section>
+
+                <section className="projects">
+                    <h2>Our Recent Projects</h2>
+
+                    {/* Satır 1 */}
+                    <div
+                        className="project-row fade-up"
+                        ref={(el) => (rowsRef.current[0] = el)}
+                    >
+                        {projectImages.slice(0, 3).map((image, index) => {
+                            const globalIndex = index;
+                            return (
+                                <div
+                                    key={index}
+                                    className="project-card"
+                                    onClick={() => {
+                                        setSelectedSlider(sliders[globalIndex]);
+                                        setSelectedProjectIndex(globalIndex); // Açıklama için bu lazım!
+                                        setCurrentIndex(0);
+                                    }}
+                                    
+                                >
+                                    <img src={image} alt={`Project ${globalIndex + 1}`} />
+                                    <div className="project-details">
+                                        <p>Project {globalIndex + 1}</p>
+                                        <p className="project-title">Project Title {globalIndex + 1}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+
+                    {/* Satır 2 */}
+                    <div
+                        className="project-row fade-up"
+                        ref={(el) => (rowsRef.current[1] = el)}
+                    >
+                        {projectImages.slice(3, 6).map((image, index) => {
+                            const globalIndex = index + 3;
+                            return (
+                                <div
+                                    key={index}
+                                    className="project-card"
+                                    onClick={() => {
+                                        setSelectedSlider(sliders[globalIndex]);
+                                        setCurrentIndex(0);
+                                    }}
+                                >
+                                    <img src={image} alt={`Project ${globalIndex + 1}`} />
+                                    <div className="project-details">
+                                        <p>Project {globalIndex + 1}</p>
+                                        <p className="project-title">Project Title {globalIndex + 1}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+
+                    <div
+                        className="project-row fade-up"
+                        ref={(el) => (rowsRef.current[2] = el)}
+                    >
+                        {projectImages.slice(6, 9).map((image, index) => {
+                            const globalIndex = index + 6;
+                            return (
+                                <div
+                                    key={index}
+                                    className="project-card"
+                                    onClick={() => {
+                                        setSelectedSlider(sliders[globalIndex]);
+                                        setCurrentIndex(0);
+                                    }}
+                                >
+                                    <img src={image} alt={`Project ${globalIndex + 1}`} />
+                                    <div className="project-details">
+                                        <p>Project {globalIndex + 1}</p>
+                                        <p className="project-title">Project Title {globalIndex + 1}</p>
+                                    </div>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+
+                    {/* ✅ Modal buraya */}
+                    
+{/*              
+                   {selectedSlider && (
+                    <div className="modal">
+                    <span className="close" onClick={closeModal}>
+                        &times;
+                    </span>
+                    <div className="modal-content">
+                        <div className="modal-image-container">
+                            <img
+                                className="modal-image"
+                                src={selectedSlider[currentIndex]}
+                                alt="Slider"
+                            />
+                            <button className="prev" onClick={goPrev}>
+                                &#10094;
+                            </button>
+                            <button className="next" onClick={goNext}>
+                                &#10095;
+                            </button>
+                        </div>
+                        <div className="modal-description">
+                            <h2>{projectDetails[sliders.indexOf(selectedSlider)]?.title}</h2>
+                            <p>{projectDetails[sliders.indexOf(selectedSlider)]?.description}</p>
+                        </div>
+                    </div>
+                </div> */}
+                {selectedSlider && selectedProjectIndex !== null && (
+    <div className="modal">
+        <span className="close" onClick={closeModal}>
+            &times;
+        </span>
+        <div className="modal-content">
+            <div className="modal-image-container">
+                <img
+                    className="modal-image"
+                    src={selectedSlider[currentIndex]}
+                    alt="Slider"
+                />
+                <button className="prev" onClick={goPrev}>
+                    &#10094;
+                </button>
+                <button className="next" onClick={goNext}>
+                    &#10095;
+                </button>
+            </div>
+
+            {/* ✅ Sağ taraf açıklama kısmı */}
+            <div className="modal-description">
+                <h3>{projectDetails[selectedProjectIndex].title}</h3>
+                <p>{projectDetails[selectedProjectIndex].description}</p>
+            </div>
         </div>
-           
+    </div>
+
+
+                
+
+)}
+
+
+                </section>
+
+            </div>
+
         </>
     );
 }

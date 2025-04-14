@@ -10,11 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^12.6.4",
+    "lucide-react": "^0.487.0",
     "react": "^19.0.0",
     "react-before-after-slider-component": "^1.1.8",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.5.0",
-    "react-scroll": "^1.9.3"
+    "react-scroll": "^1.9.3",
+    "react-swipeable": "^7.0.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
